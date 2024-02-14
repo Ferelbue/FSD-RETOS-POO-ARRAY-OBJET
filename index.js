@@ -207,18 +207,237 @@
 // al segundo y al resto de competidores por separado.
 
 
+// let arrayRunners = ["Carlos","Paco","Pepe","Javi","David"]
+
+// const [winner,second, ...rest] = arrayRunners
+
+// console.log(`El ganador es ${winner}`)
+// console.log(`El segundo clasificado es ${second}`)
+
+
+//RETO 10 
+//     Crea un objeto que almacene los datos de una persona (nombre, apellidos, edad, 
+//     dirección, ciudad, país... y lo que quieras). Crea una función que saque por consola el 
+//     nombre completo (nombre y apellidos) de la persona a modo de string.
+
+
+// let arrayObjects = [{
+//     nombre: "Carlos",
+//     apellido: "Perez",
+//     edad: "20",    
+//     ciudad: "Valencia",
+//     telefono: "654879231"
+// },
+// {
+//     nombre: "Paco",
+//     apellido: "Navarro",
+//     edad: "25",
+//     ciudad: "Alicante",
+//     telefono: "658951423"
+// },
+// {
+//     nombre: "Antonio",
+//     apellido: "Martinez",
+//     edad: "30",
+//     ciudad: "Castellon",
+//     telefono: "685749878"
+// }]
+
+// const extractName = (array) => {
+
+//     for (let i = 0; i<arrayObjects.length;i++){
+
+//         const{nombre,apellido, ...rest} = array[i]
+
+//         console.log(nombre,apellido)
+//     }
+
+// }
+
+// extractName(arrayObjects)
+
+
+// RETO 11
+// Utiliza el objeto del ejercicio anterior y mediante desestructuración accede únicamente a 
+// tres de esas propiedades
+
+
+// let arrayObjects = [{
+//     nombre: "Carlos",
+//     apellido: "Perez",
+//     edad: "20",    
+//     ciudad: "Valencia",
+//     telefono: "654879231"
+// },
+// {
+//     nombre: "Paco",
+//     apellido: "Navarro",
+//     edad: "25",
+//     ciudad: "Alicante",
+//     telefono: "658951423"
+// },
+// {
+//     nombre: "Antonio",
+//     apellido: "Martinez",
+//     edad: "30",
+//     ciudad: "Castellon",
+//     telefono: "685749878"
+// }]
+
+// const extractName = (array) => {
+
+//     for (let i = 0; i<arrayObjects.length;i++){
+//         //Acceso a la clave
+//         const{nombre,apellido,edad, ...rest} = array[i]
+//         console.log(nombre,apellido,edad)
+//         //Acceso a la clave valor
+//         const{ciudad,telefono, ...resto} = array[i]
+//         console.log(resto)
+//     }
+// }
+// extractName(arrayObjects)
 
 
 
+//RETO 12
+// Crea un array que contenga al menos tres objetos con las mismas propiedades (al 
+// menos tres) y distintos valores. Crea una función que saque por consola el valor de una de 
+// las propiedades para todos los objetos.
+
+
+// let arrayObjects = [{
+//     nombre: "Carlos",
+//     apellido: "Perez",
+//     edad: "20",    
+//     ciudad: "Valencia",
+//     telefono: "654879231"
+// },
+// {
+//     nombre: "Paco",
+//     apellido: "Navarro",
+//     edad: "25",
+//     ciudad: "Alicante",
+//     telefono: "658951423"
+// },
+// {
+//     nombre: "Antonio",
+//     apellido: "Martinez",
+//     edad: "30",
+//     ciudad: "Castellon",
+//     telefono: "685749878"
+// }]
+
+// const extractName = (array) => {
+
+//     for (let i = 0; i<arrayObjects.length;i++){
+//         //Acceso a la clave
+//         const{nombre,edad,...rest} = array[i]
+//         console.log(nombre,edad)
+//         //Acceso a la clave valor
+//         const{ciudad,apellido,telefono, ...resto} = array[i]
+//         console.log(resto)
+//     }
+// }
+// extractName(arrayObjects)
 
 
 
+// RETO 13
+
+// Crea un objeto que contenga una receta de cocina, con propiedades asignadas a su 
+// nombre, tiempo de preparación e ingredientes. Haz una función que saque por consola el 
+// nombre, el tiempo y una lista de los ingredientes.
+
+// let objetc = {
+//     nombre: "Patatas fritas",
+//     tiempo: 60,
+//     ingredientes: "Patatas aceite sal"
+// }
+
+// const receta = (objeto) => {
+
+//     console.log(objeto)
+
+
+// }
+
+// receta (objetc)
 
 
 
+// RETO 14
+// Reutiliza la receta del ejercicio anterior y añádela a un array que contenga varias recetas 
+// similares, con las mismas propiedades. Utiliza también la función del ejercicio anterior y 
+// saca por consola todas las recetas de tu array.
+
+// let objetc = [
+//     {
+//         nombre: "Patatas fritas",
+//         tiempo: 60,
+//         ingredientes: "Patatas, aceite y sal"
+//     },
+//     {
+//         nombre: "Pollo al horno",
+//         tiempo: 120,
+//         ingredientes: "Pollo, aceite y sal"
+
+//     },
+//     {
+//         nombre: "tortilla francesa",
+//         tiempo: 5,
+//         ingredientes: "Huevos, aceite y sal"
+
+//     }]
+
+// const receta = (objeto) => {
+
+//     for (let i = 0; i<objeto.length;i++){
+
+//         console.log(objeto[i])
+//     }
+
+// }
+// receta(objetc)
 
 
+// RETO 15
+// Haz lo mismo declarando una clase "receta" e instanciando cada una de las nuevas 
+// recetas. Luego añádelas a un array y reutiliza la función que habías creado en el ejercicio 
+// anterior para sacarlas por consola.
 
+// class Receta {
+//     //constructor
+//     constructor(nombre, tiempo, ingredientes) {
+//         this.nombre = nombre,
+//         this.tiempo = tiempo,
+//         this.ingredientes = ingredientes
+//     }
+//     //metodos
+//     get() {
+
+//     }
+//     set() {
+
+//     }
+// }
+
+// //Instanciaciones
+// let receta1 = new Receta("Patatas fritas", 60, "Patatas, aceite y sal")
+// let receta2 = new Receta("Pollo al horno", 120, "Pollo, aceite y sal")
+// let receta3 = new Receta("Tortilla francesa", 5, "Huevos, aceite y sal")
+// let array = []
+
+//     array.push(receta1,receta2,receta3)
+
+// const receta = (array) => {
+
+//     for (let i = 0; i<array.length;i++){
+
+//         console.log(array[i])
+//     }
+
+// }
+// receta(array)
 
 
 
